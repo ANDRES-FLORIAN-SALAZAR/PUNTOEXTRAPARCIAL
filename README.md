@@ -95,8 +95,8 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 
 ## 📢 Contacto
 
-- Email: [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com)
-- GitHub: @tu-usuario
+- Email: [duvanfloriansalazar@gmail.com](mailto:duvanfloriansalazar@gmail.com)
+- GitHub: @ANDRES-FLORIAN-SALAZAR
 
 ## 🎖️ Agradecimientos
 
