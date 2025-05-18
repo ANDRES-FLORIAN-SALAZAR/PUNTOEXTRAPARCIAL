@@ -1,0 +1,41 @@
+{% extends 'FlorianApp/base.html' %}
+
+{% block title %}Lista de Productos{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Lista de Productos</h2>
+    <a href="{% url 'FlorianApp:product_create' %}" class="btn btn-primary">Nuevo Producto</a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Fecha de Creación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category.name }}</td>
+                <td>${{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>{{ product.created_at|date:"d/m/Y H:i" }}</td>
+                <td>
+                    <a href="{% url 'FlorianApp:product_detail' product.pk %}" class="btn btn-sm btn-info">Ver</a>
+                    <a href="{% url 'FlorianApp:product_update' product.pk %}" class="btn btn-sm btn-warning">Editar</a>
+                    <a href="{% url 'FlorianApp:product_delete' product.pk %}" class="btn btn-sm btn-danger delete-btn" data-product-id="{{ product.pk }}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.sqlite3-journal
+db.sqlite3
+
+# Media files (user uploads)
+media/
+
+# Static file compilation
+staticfiles/
+static/
+
+# Django migrations
+*/migrations/
+!*/migrations/__init__.py
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.env/
+
+# dotenv environment variables
+.env
+.env.*
+
+# Python distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Unit test / test output
+test-results/
+junit-*.xml
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Pytest
+.pytest_cache/
+
+# VSCode profiling
+profile_default/
+
+# Node (if using frontend tooling)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Local settings override (optional)
+local_settings.py

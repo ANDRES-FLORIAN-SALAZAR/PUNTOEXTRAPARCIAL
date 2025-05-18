@@ -1,0 +1,45 @@
+{% extends 'FlorianApp/base.html' %}
+
+{% block title %}{% if product %}Editar Producto{% else %}Nuevo Producto{% endif %}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2>{% if product %}Editar Producto{% else %}Nuevo Producto{% endif %}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="{{ form.name.id_for_label }}" class="form-label">Nombre</label>
+                {{ form.name }}
+                {{ form.name.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.description.id_for_label }}" class="form-label">Descripción</label>
+                {{ form.description }}
+                {{ form.description.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.price.id_for_label }}" class="form-label">Precio</label>
+                {{ form.price }}
+                {{ form.price.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.stock.id_for_label }}" class="form-label">Stock</label>
+                {{ form.stock }}
+                {{ form.stock.errors }}
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.category.id_for_label }}" class="form-label">Categoría</label>
+                <select name="category" id="{{ form.category.id_for_label }}" class="form-select">
+                    <option value="electronica">Electrónica</option>
+                    <option value="ropa">Ropa</option>
+                    <option value="hogar">Hogar</option>
+                </select>
+                {{ form.category.errors }}
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{% url 'FlorianApp:product_list' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
